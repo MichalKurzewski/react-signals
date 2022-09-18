@@ -1,7 +1,9 @@
 import React from "react";
-import count from "./Counter";
-const CounterChildOfChild = () => {
-  return <button onClick={()=>count.value++}>increment in Child</button>;
+
+const CounterChildOfChild = (props) => {
+  return (
+    <button onClick={() => props.count.value++}>increment in Child</button>
+  );
 };
 
 export default CounterChildOfChild;

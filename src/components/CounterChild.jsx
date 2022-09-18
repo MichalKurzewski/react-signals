@@ -1,8 +1,8 @@
 import React from "react";
 import CounterChildOfChild from "./CounterChildOfChild";
-const CounterChild = ()=>{
+const CounterChild = (props)=>{
     return (
-      <CounterChildOfChild/>
+      <CounterChildOfChild count={props.count}/>
     )
 }
 export default CounterChild;

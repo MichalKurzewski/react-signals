@@ -1,7 +1,6 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import Counter from "./components/Counter";
-import { useEffect } from "react";
 import { useSignal} from "@preact/signals-react";
 
 function App() {
