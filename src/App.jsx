@@ -7,11 +7,11 @@ function App() {
   const rerenders = useSignal(0);
   useEffect(()=>{
     rerenders.value++;
-    console.log('%c [ Rerenders ]-20', 'font-size:13px; background:pink; color:#bf2c9f;', rerenders.value)
+    console.log('%c [ Rerenders Root]-20', 'font-size:13px; background:pink; color:#bf2c9f;', rerenders.value)
  })
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1 className="header">SignalS + Composition test</h1>
       <Counter/>
     </div>
   );

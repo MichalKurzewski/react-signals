@@ -1,7 +1,7 @@
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import React from "react";
-import App from "./App";
+import Counter from "./Counter";
 
 let container = null;
 beforeEach(() => {
@@ -17,11 +17,15 @@ afterEach(() => {
   container = null;
 });
 
-it("renders header", () => {
+it("renders unchanged acontent", () => {
   act(() => {
-    render(<App />, container);
+    render(<Counter />, container);
   });
-  expect(container.querySelector(".header").textContent).toBe("SignalS + Composition test");
-  
+  expect(container.querySelector(".content").textContent).toBe("5 * 2 = 10");
 });
-
+it("renders changed acontent", () => {
+  act(() => {
+    render(<Counter count={20}/>, container);
+  });
+  expect(container.querySelector(".content").textContent).toBe("20 * 2 = 40");
+});
