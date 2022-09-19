@@ -1,3 +1,6 @@
+# Preact SignalS (used in React) with composition over prop-drill exercise
+This project is a private spike to explore SignalS cababilities
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
