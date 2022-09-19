@@ -17,13 +17,13 @@ afterEach(() => {
   container = null;
 });
 
-it("renders unchanged acontent", () => {
+it("renders unchanged content", () => {
   act(() => {
     render(<Counter />, container);
   });
   expect(container.querySelector(".content").textContent).toBe("5 * 2 = 10");
 });
-it("renders changed acontent", () => {
+it("renders changed content", () => {
   act(() => {
     render(<Counter count={20}/>, container);
   });
